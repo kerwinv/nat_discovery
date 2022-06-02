@@ -1,0 +1,31 @@
+enum MSG_TYPE {
+  BINDING_REQUESRT = 0x01,
+  BINDING_RESPONSE = 0x101,
+  BINDING_ERROR_RESPONSE = 0x111,
+}
+
+enum ATTRIBUTES_TYPE {
+  MAPPED_ADDRESS = 0x01,
+  CHANGE_REQUEST = 0x03,
+  CHANGED_ADDRESS = 0x05,
+}
+
+enum NAT_TYPE {
+  UDP_BLOCKED = 1,
+  // rfc 3489
+  SYMMETRIC_UDP_FIREWALL,
+  OPEN_INTERNET,
+  FULL_CONE,
+  RESTRICTED_NAT,
+  RESTRICTED_PORT_NAT,
+  SYMMETRIC_NAT,
+}
+
+// rfc 3489 默认配置
+const CFG_3489 = {
+  stun: 'stun.sipgate.net',
+  port: 3478,
+};
+
+export {MSG_TYPE, ATTRIBUTES_TYPE, NAT_TYPE, CFG_3489};
+export {ERR_CODE} from './error_code';
