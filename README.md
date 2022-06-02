@@ -1,2 +1,2 @@
 # nat_discovery
-nat discovery
+js lib for nat discovery
